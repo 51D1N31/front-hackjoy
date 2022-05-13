@@ -75,6 +75,15 @@ a:focus {
     display: none;
 }
 
+.nav-icon-config {
+    width: 40px;
+    height: 40px;
+    float: right;
+    background-color: white;
+    border: none;
+    outline: none;
+    font-size: large;
+}
 #sidebarCollapse,
 #sidebarCollapse1 {
     width: 40px;

@@ -15,6 +15,7 @@
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="./index.js" defer></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
 </head>
 
@@ -23,9 +24,9 @@
         <div class="col-auto col-md-3 col-xl-2 bg-dark" id="sidebar">
             <div class="d-flex flex-column align-items-start px-3 pt-2 text-white min-vh-100">
                 <div class="d-flex flex-row" id="topMenu">
-                    <a href="/"
+                    <a href="PageMain.html"
                         class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
-                        <span class="fs-5 d-sm-inline">Menu</span>
+                        <span class="fs-5 d-sm-inline"><img src="hack_joy.png"></span>
                     </a>
                     <button type="button" id="sidebarCollapse1" class="navbar-btn">
                         <span></span>
@@ -36,14 +37,15 @@
                 <ul class="nav nav-pills flex-column mb-auto mb-0 align-items-start" id="menu">
                     <li class="nav-item">
                         <a href="#" class="nav-link align-middle px-0">
-                            <i class="fs-4 bi-house"></i> <span class="ms-1 d-sm-inline">Home</span>
+                            <i class="fs-4 bi-house"></i> <span class="ms-1 d-sm-inline">Pagina principal</span>
                         </a>
                     </li>
                     <li>
                         <a href="#submenu1" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
-                            <i class="fs-4 bi-speedometer2"></i> <span class="ms-1  d-sm-inline">Dashboard <i class="bi bi-arrow-down-circle"></i></span>
+                            <i class="fs-4 bi-speedometer2"></i> <span class="ms-1  d-sm-inline">Dashboard <i
+                                    class="bi bi-arrow-down-circle"></i></span>
                         </a>
-                        <ul class="collapse show nav flex-column ms-1" id="submenu1" data-bs-parent="#menu">
+                        <ul class="collapse nav flex-column ms-1" id="submenu1" data-bs-parent="#menu">
                             <li class="w-100">
                                 <a href="#" class="nav-link px-0"> <span class=" d-sm-inline">Item</span>
                                     1 </a>
@@ -60,7 +62,8 @@
                     </li>
                     <li>
                         <a href="#submenu2" data-bs-toggle="collapse" class="nav-link px-0 align-middle ">
-                            <i class="fs-4 bi-bootstrap"></i> <span class="ms-1  d-sm-inline">Bootstrap</span></a>
+                            <i class="fs-4 bi-bootstrap"></i> <span class="ms-1  d-sm-inline">Bootstrap</span>
+                        </a>
                         <ul class="collapse nav flex-column ms-1" id="submenu2" data-bs-parent="#menu">
                             <li class="w-100">
                                 <a href="#" class="nav-link px-0"> <span class=" d-sm-inline">Item</span>
@@ -129,16 +132,19 @@
                 <div class="col">
                     <div class="shadow p-3 mb-5 bg-white rounded">
                         <div class="row">
-                            <div class="col">
+                            <div class="col-12">
                                 <button type="button" id="sidebarCollapse" class="navbar-btn active">
                                     <span></span>
                                     <span></span>
                                     <span></span>
                                 </button>
+
+                                <button type="button" class="nav-icon-config">
+                                    <i class="bi bi-gear"></i>
+                                </button>
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
             <div class="row">
