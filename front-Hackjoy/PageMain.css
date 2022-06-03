@@ -9,7 +9,17 @@ li a {
     z-index: 1000;
 }
 
-.navConfig {
-    box-shadow:0px 10px shadow;
+@media (min-width: 992px) {
+    .ddMAIS {
+        display: none;
+    }
+}
 
+@media (max-width: 992px) {
+    .nav-item {
+        display: none;
+    }
+    .imgLogo {
+        display: none;
+    }
 }
