@@ -80,15 +80,7 @@ $(document).ready(() => {
 
             document.getElementById('student_login').style.display = "none";
             document.getElementById('admin_login').style.display = "none";
-
-        } else if (type == "user_admin_login") {
-            document.getElementById('admin_login').style.display = "inline";
-
-            document.getElementById('teacher_login').style.display = "none";
-            document.getElementById('student_login').style.display = "none";
-
         }
-
     }
 
     function check_user_cadastro(type) {
@@ -105,7 +97,6 @@ $(document).ready(() => {
         }
     }
 
-    /* Testar esse if de mudar documento dependendo da região 
     function changeDocument(value) {
         if (value == "Brasil") {
 
@@ -118,7 +109,7 @@ $(document).ready(() => {
             document.getElementById('cpf').style.display = "none";
 
         }
-    }*/
+    }
 
     $("body").ready(ConfigPage());
 
@@ -127,4 +118,18 @@ $(document).ready(() => {
 
         cadastaUsuario();
     })
+
+    $("#user_student_login, #user_teacher_login").on("click", (e) => {
+        check_user_login(e.target.value);
+    })
+
+    $("#user_student_cadastro, #user_teacher_cadastro").on("click", (e) => {
+        check_user_cadastro(e.target.value);
+    })
+
+    $("#nationality_cadastro").on("change", (e) => {
+        changeDocument(e.target.value);
+    })
+
+    $('.cpf').mask('000.000.000-00', { reverse: true });
 }) 

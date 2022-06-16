@@ -84,6 +84,7 @@ a:focus {
     outline: none;
     font-size: large;
 }
+
 #sidebarCollapse,
 #sidebarCollapse1 {
     width: 40px;
@@ -131,7 +132,6 @@ a:focus {
     margin: 5px auto;
 }
 
-#menu *
-{
+#menu * {
     color: white;
 }
