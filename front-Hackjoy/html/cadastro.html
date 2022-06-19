@@ -11,28 +11,30 @@
     <!-- CDN Jquery -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 
-    <link rel=" stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel=" stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
     <link rel="shortcut icon" href="../Image/favicon.ico" type="image/x-icon">
 
 </head>
 
 <body>
+    <!-- Começo da navbar-->
     <nav class="navbar navbar-expand-lg navbar-light bg-black">
         <div class="container-fluid shadow">
             <div class="navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a class="navbar-brand " href="PageMain.html">
-                            <img src="../Image/logotipo.png" width="130" height="55" class="d-inline-block align-text-top ">
+                            <img src="/front-hackjoy/Image/logotipo.png" width="130" height="55"
+                                class="d-inline-block align-text-top ">
                         </a>
                     </li>
-                    <!--<li class="nav-item">
-                        <a class="nav-link text-white" href="#">Seila eu</a>
-                    </li>-->
                     <li class="nav-item dropdown ">
-                        <a class="nav-link dropdown-toggle text-white mt-2" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle text-white mt-2" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
                             INFORMAÇÕES DO SITE
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -50,28 +52,37 @@
                 </ul>
                 <ul class="d-flex">
                     <li class="nav-item">
-                        <a class="nav-link text-white mt-2" href="cadastro.html">CADASTRO / LOGIN</a>
+                        <a class="nav-link text-white mt-2" href="login.html">ENTRAR</a>
                     </li>
-                    <li class="ddMAIS">
-                        <a class="navbar-brand " href="PageMain.html">
-                            <img src="../Image/logotipo.png" width="130" height="55" class="d-inline-block align-text-top ">
+                </ul>
+                <ul class="d-flex">
+                    <div class="col">
+                        <div class="row">
+                            <div class="ddMAIS">
+                                <a class="nav-link dropdown-toggle text-white mt-2 txtMais" href="#" id="navbarDropdown"
+                                    role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    MAIS
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item">API</a></li>
+                                    <li><a class="dropdown-item">.</a></li>
+                                    <li><a class="dropdown-item"> Something else here</a></li>
+                                    <li><a class="dropdown-item" href="#">LOGIN</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ddMAIS">
+                        <a class="navbar-brand" href="PageMain.html">
+                            <img src="/front-Hackjoy/Image/logotipo.png" width="130" height="55"
+                                class="d-inline-block align-text-top ">
                         </a>
-                    </li>
-                    <li class="ddMAIS">
-                        <a class="nav-link dropdown-toggle text-white mt-2" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            MAIS
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item">API</a></li>
-                            <li><a class="dropdown-item">.</a></li>
-                            <li><a class="dropdown-item"> Something else here</a></li>
-                            <li><a class="dropdown-item" href="cadastro.html">CADASTRO / LOGIN</a></li>
-                        </ul>
-                    </li>
+                    </div>
                 </ul>
             </div>
         </div>
     </nav>
+    <!--Fim da navbar-->
 
     <div class="container mt-4">
         <a class="links" id="paracadastro"></a>
@@ -86,21 +97,24 @@
                     <div class="row my-3">
                         <div class="col-sm-12 col-md-12">
                             <label for="name_cadastro">Nome:</label>
-                            <input class="form-control" id="name_cadastro" name="name_cadastro" type="text" required autofocus/>
+                            <input class="form-control" id="name_cadastro" name="name_cadastro" type="text" required
+                                autofocus />
                         </div>
                     </div>
 
                     <div class="row my-3">
                         <div class="col-sm-12 col-md-12">
                             <label for="birth_date_cadastro">Data de Nascimento: </label>
-                            <input class="form-control" type="date" name="birth_date_cadastro" id="birth_date_cadastro" required />
+                            <input class="form-control" type="date" name="birth_date_cadastro" id="birth_date_cadastro"
+                                required />
                         </div>
                     </div>
 
                     <div class="row my-3">
                         <div class="col-sm-12 col-md-12">
                             <label for="nationality_cadastro">Nacionalidade: </label>
-                            <select class="form-control" name="nationality_cadastro" id="nationality_cadastro" required>
+                            <select class="form-control inputDecorate" name="nationality_cadastro"
+                                id="nationality_cadastro" required>
                                 <option value="Brasil" selected="selected">Brasil</option>
                                 <option value="Afeganistão">Afeganistão</option>
                                 <option value="África do Sul">África do Sul</option>
@@ -205,7 +219,8 @@
                                 <option value="Ilhas Cocos (Keeling)">Ilhas Cocos (Keeling)</option>
                                 <option value="Ilhas Cook">Ilhas Cook</option>
                                 <option value="Ilhas Feroé">Ilhas Feroé</option>
-                                <option value="Ilhas Geórgia do Sul e Sandwich do Sul">Ilhas Geórgia do Sul e Sandwich do
+                                <option value="Ilhas Geórgia do Sul e Sandwich do Sul">Ilhas Geórgia do Sul e Sandwich
+                                    do
                                     Sul</option>
                                 <option value="Ilhas Malvinas">Ilhas Malvinas</option>
                                 <option value="Ilhas Marshall">Ilhas Marshall</option>
@@ -306,7 +321,8 @@
                                 <option value="Saint-Pierre e Miquelon">Saint-Pierre e Miquelon</option>
                                 <option value="Samoa Americana">Samoa Americana</option>
                                 <option value="Samoa">Samoa</option>
-                                <option value="Santa Helena, Ascensão e Tristão da Cunha">Santa Helena, Ascensão e Tristão
+                                <option value="Santa Helena, Ascensão e Tristão da Cunha">Santa Helena, Ascensão e
+                                    Tristão
                                     da Cunha</option>
                                 <option value="Santa Lúcia">Santa Lúcia</option>
                                 <option value="Senegal">Senegal</option>
@@ -333,7 +349,8 @@
                                 <option value="Tanzânia">Tanzânia</option>
                                 <option value="Terras Austrais e Antárticas Francesas">Terras Austrais e Antárticas
                                     Francesas</option>
-                                <option value="Território Britânico do Oceano Índico">Território Britânico do Oceano Índico
+                                <option value="Território Britânico do Oceano Índico">Território Britânico do Oceano
+                                    Índico
                                 </option>
                                 <option value="Timor-Leste">Timor-Leste</option>
                                 <option value="Togo">Togo</option>
@@ -362,12 +379,16 @@
 
                     <div class="row my-3">
                         <div class="col-sm-12 col-md-12">
-                            <label for="cpf_document_cadastro">CPF: </label>
-                            <input type="text" name="cpf_document_cadastro" id="cpf_document_cadastro" class="cpf form-control" placeholder="000.111.222-55" required/>
+                            <p id="cpf">
+                                <label for="cpf_document_cadastro">CPF: </label>
+                                <input type="text" name="cpf_document_cadastro" id="cpf_document_cadastro"
+                                    class="cpf form-control" placeholder="000.111.222-33" required />
+                            </p>
 
                             <p id="other">
                                 <label for="other_document_cadastro">Outro Documento: </label>
-                                <input class="form-control" type="number" name="other_document_cadastro" id="other_document_cadastro" />
+                                <input class="other form-control" type="text" name="other_document_cadastro"
+                                    id="other_document_cadastro" placeholder="000.111.222-33" />
                             </p>
                         </div>
                     </div>
@@ -379,27 +400,33 @@
                             </p>
 
                             <label for="masculine_gender_cadastro">Masculino </label>
-                            <input name="gender_cadastro" type="radio" id="masculine_gender_cadastro" value="Masculino" />
+                            <input name="gender_cadastro" type="radio" id="masculine_gender_cadastro"
+                                value="Masculino" />
 
                             <label for="female_gender_cadastro">| Feminino </label>
                             <input name="gender_cadastro" type="radio" id="female_gender_cadastro" value="Feminino" />
 
                             <label for="noDeclare_gender_cadastro">| Não declarar</label>
-                            <input name="gender_cadastro" type="radio" id="noDeclare_gender_cadastro" value="Não declarar" />
+                            <input name="gender_cadastro" type="radio" id="noDeclare_gender_cadastro"
+                                value="Não declarar" />
                         </div>
                     </div>
 
                     <div class="row my-3">
                         <div class="col-sm-12 col-md-12">
                             <label for="email_cadastro"> Email: </label>
-                            <input class="form-control" type="text" name="email_cadastro" id="email_cadastro" placeholder="ex. cl200265@g.unicamp.br" required/>
+                            <input type="text" name="email_cadastro" id="email_cadastro"
+                                placeholder="ex. cl200265@g.unicamp.br" onblur="validacaoEmail(email_cadastro)"
+                                required />
+                            <div id="msgemail"></div>
                         </div>
                     </div>
 
                     <div class="row my-3">
                         <div class="col-sm-12 col-md-12">
                             <label for="password_cadastro">Senha: </label>
-                            <input class="form-control" type="password" name="password_cadastro" id="password_cadastro" placeholder="ex. juninDoGas123" required/>
+                            <input class="form-control" type="password" name="password_cadastro" id="password_cadastro"
+                                placeholder="ex. juninDoGas123" required />
                         </div>
                     </div>
 
@@ -413,16 +440,11 @@
 
                     </div>
 
-                    <!--Cadastro do administrador-->
-                    <div id="admin_cadastro">
-
-                    </div>
-
                     <button id="btnsubmit" type="button">Cadastrar</button>
 
                     <p class="link">
                         Já tem conta?
-                        <a href="#paralogin" style="text-decoration: none;"> Ir para Login </a>
+                        <a href="login.html" style="text-decoration: none;"> Ir para Login </a>
                     </p>
                 </form>
             </div>
@@ -430,19 +452,27 @@
     </div>
 
     <!-- jQuery CDN - Slim version (=without AJAX) -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
 
     <!-- Popper.JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
+        integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+        crossorigin="anonymous"></script>
 
     <!-- jQuery Custom Scroller CDN -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
     <!-- Bootstrap bundle -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
 
     <!-- JQuery mask -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js" integrity="sha512-pHVGpX7F/27yZ0ISY+VVjyULApbDlD0/X0rgGbTqCE7WFW5MezNTWG/dnhtbBuICzsd0WQPgpE4REBLv+UqChw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"
+        integrity="sha512-pHVGpX7F/27yZ0ISY+VVjyULApbDlD0/X0rgGbTqCE7WFW5MezNTWG/dnhtbBuICzsd0WQPgpE4REBLv+UqChw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <!-- CDN SweetAlert JS -->
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
