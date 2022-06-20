@@ -5,6 +5,13 @@ li {
     margin-left: 20px;
 }
 
+.txtValorant {
+    Font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    margin-left: 0px;
+}
+
 li a {
     z-index: 1000;
 }
@@ -19,6 +26,7 @@ li a {
     .nav-item {
         display: none;
     }
+
     .imgLogo {
         display: none;
     }
