@@ -1,17 +1,3 @@
-/*
-    Já que a API ta retornando um array, é só manipular esse array
-    Ai tu pode guardar esse token num local storage
-    tendisó deixa eu ver um bgl
-
-    agora, as próximas requisições vão precisar desse token para saber que o usuário está autenticado no sistema
-    manda esse código aqui pro github que eu faço essa parte que eu acho que vai ser um pouco complicadinho de arrumar isso ae
-    blz? d
-    fecho, depois eu vejo oq tu fez e tento entender o codigo, dai ggblz
-    manda na dev-s e na main
-    blzz flw to indo
-    floww
-*/
-
 function loginStudent(email, password) {
     $("#btnsubmit").attr("disabled", "disabled");
     $("#btnsubmit").html(
