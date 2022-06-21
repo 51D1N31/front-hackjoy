@@ -5,11 +5,51 @@ li {
     margin-left: 20px;
 }
 
+.titulos {
+    margin-top: 6%;
+    margin-left: 6%;
+    margin-right: 6%;
+    font-family: 'VALORANT', sans-serif;
+    font-weight: bold;
+    color: red;
+}
+
+.configCard {
+    text-align: center;
+    color: black;
+}
+
+.configTituloCursos {
+    margin-top: 10%;
+    font-size: 400%;
+    text-align: right;
+}
+
+.configComunidade {
+    text-align: center;
+    font-size: 400%;
+    margin-top: 10%;
+}
+
+.txtFrontImg {
+    display: inline-block;
+    position: relative;
+    font-size: 400%;
+}
+
 .txtValorant {
     Font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 14px;
     font-weight: bold;
-    margin-left: 0px;
+}
+
+.VenhaPraHackJoy {
+    text-decoration: none;
+    color: red;
+}
+
+img {
+    width: 100%;
 }
 
 li a {
