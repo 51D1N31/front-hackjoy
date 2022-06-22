@@ -5,16 +5,20 @@ function loginStudent(email, password) {
         "<span class='visually-hidden'>Carregando...</span>&nbsp;&nbsp;Carregando..."
     );
 
+
     let student = {
         "email": email,
         "password": password,
     };
 
-    post("https://hackjoy-api.herokuapp.com/students/login", student, function (data, textStatus, xhr) {
-        console.log("Token retornado: " + data);
+    post("https://hackjoy-api.herokuapp.com/students/login", student, function(data, textStatus, xhr) {
+        setUser("student", data["id_student"]);
+        setToken(data["token"]);
 
         $("#btnsubmit").removeAttr("disabled");
         $("#btnsubmit").html("Entrar");
+
+        window.location = "painel_student.html";
     });
 }
 
