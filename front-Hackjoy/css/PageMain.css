@@ -21,7 +21,6 @@ li {
 
 .configTituloCursos {
     margin-top: 10%;
-    font-size: 400%;
     text-align: right;
     border-right: 2px solid black;
     display: inline-block;
@@ -32,24 +31,13 @@ li {
 
 .configComunidade {
     text-align: center;
-    font-size: 400%;
     margin-top: 10%;
-}
-
-.text-block {
-    overflow: hidden;
+    border-right: 2px solid black;
+    display: inline-block;
     position: relative;
-}
-
-.text-block:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #dc3d4b;
-    animation: revealBlock 1s 2s both;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: blinkCursor 500ms steps(60) infinite normal;
 }
 
 @keyframes revealBlock {
@@ -106,11 +94,11 @@ li {
 
 @keyframes typing-curso {
     from {
-        width: 0em;
+        width: 0%;
     }
 
     to {
-        width: 21em;
+        width: 100%;
     }
 }
 
@@ -118,7 +106,6 @@ li {
     border-right: 2px solid black;
     display: inline-block;
     position: relative;
-    font-size: 400%;
     white-space: nowrap;
     overflow: hidden;
 }
@@ -153,6 +140,18 @@ body {
     .ddMAIS {
         display: none;
     }
+
+    .configNoticias {
+        font-size: 400%;
+    }
+
+    .configComunidade {
+        font-size: 400%;
+    }
+
+    .configTituloCursos {
+        font-size: 400%;
+    }
 }
 
 @media (max-width: 992px) {
@@ -162,5 +161,17 @@ body {
 
     .imgLogo {
         display: none;
+    }
+
+    .configNoticias {
+        font-size: 200%;
+    }
+
+    .configComunidade {
+        font-size: 200%;
+    }
+
+    .configTituloCursos {
+        font-size: 190%;
     }
 }
