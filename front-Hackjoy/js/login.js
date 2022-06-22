@@ -11,7 +11,7 @@ function loginStudent(email, password) {
         "password": password,
     };
 
-    post("https://hackjoy-api.herokuapp.com/students/login", student, function(data, textStatus, xhr) {
+    post("https://hackjoy-api.herokuapp.com/students/login", student, function (data, textStatus, xhr) {
         setUser("student", data["id_student"]);
         setToken(data["token"]);
 
@@ -38,5 +38,15 @@ $(document).ready(() => {
 
 
     })
+
+    let btn = document.querySelector('.lnr-eye');
+    btn.addEventListener('click', function () {
+        let input = document.querySelector('#password_login');
+        if (input.getAttribute('type') == 'password') {
+            input.setAttribute('type', 'text');
+        } else {
+            input.setAttribute('type', 'password');
+        }
+    });
 
 })
