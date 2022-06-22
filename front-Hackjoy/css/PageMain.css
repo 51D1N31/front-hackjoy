@@ -23,6 +23,11 @@ li {
     margin-top: 10%;
     font-size: 400%;
     text-align: right;
+    border-right: 2px solid black;
+    display: inline-block;
+    position: relative;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .configComunidade {
@@ -31,10 +36,91 @@ li {
     margin-top: 10%;
 }
 
-.txtFrontImg {
+.text-block {
+    overflow: hidden;
+    position: relative;
+}
+
+.text-block:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #dc3d4b;
+    animation: revealBlock 1s 2s both;
+}
+
+@keyframes revealBlock {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(100%);
+    }
+}
+
+/* Configuração de animação de digitação*/
+@keyframes blinkCursor {
+    from {
+        border-right-color: black;
+    }
+
+    to {
+        border-right-color: transparent;
+    }
+}
+
+.typing-animation-noticias {
+    animation: blinkCursor 500ms steps(60) infinite normal, typing-noticias 2s 1s normal both;
+    animation-play-state: paused;
+}
+
+/*configuração de animação do texto sendo digitado*/
+@keyframes typing-noticias {
+    from {
+        width: 0em;
+    }
+
+    to {
+        width: 9.6em;
+    }
+}
+
+@keyframes blinkCursor-curso {
+    from {
+        border-right-color: black;
+    }
+
+    to {
+        border-right-color: transparent;
+    }
+}
+
+.typing-animation-cursos {
+    animation: blinkCursor-curso 500ms steps(60) infinite normal, typing-curso 3s 1s normal both;
+    animation-play-state: paused;
+}
+
+@keyframes typing-curso {
+    from {
+        width: 0em;
+    }
+
+    to {
+        width: 21em;
+    }
+}
+
+.configNoticias {
+    border-right: 2px solid black;
     display: inline-block;
     position: relative;
     font-size: 400%;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .txtValorant {
@@ -45,7 +131,7 @@ li {
 
 .VenhaPraHackJoy {
     text-decoration: none;
-    color: red;
+    color: black;
 }
 
 img {
@@ -54,6 +140,13 @@ img {
 
 li a {
     z-index: 1000;
+}
+
+body {
+    margin: 0px auto;
+    background-image: url("/front-Hackjoy/Image/backImagePagemain.png");
+    background-repeat: repeat-y;
+    background-position: center;
 }
 
 @media (min-width: 992px) {
