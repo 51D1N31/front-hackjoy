@@ -22,7 +22,14 @@ function cadastrarStudent(name, birth_date, nationality, document, gender, email
 
     post("https://hackjoy-api.herokuapp.com/students/new", student, function (data, textStatus, xhr) {
         if (typeof data == "object") {
-            swal("Cadastrado com sucesso!", "", "success");
+            swal({
+                title: "Cadastrado com sucesso!",
+                icon: "success",
+                buttons: true,
+                dangerMode: false,
+            }).then((willDelete) => {
+                window.location = "login.html";
+            });
         }
 
         $("#btnsubmit").removeAttr("disabled");
