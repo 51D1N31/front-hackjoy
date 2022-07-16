@@ -3,9 +3,10 @@ function verificaSeStudentEstaLogado() {
 }
 
 function carregaStudentAtual() {
-    get("https://hackjoy-api.herokuapp.com/students/" + getIdUserEntity(), {}, function(data, textStatus, xhr) {
-        // console.log(data);
-        $("#student_name").text(data["user"]["name"]);
+    get("https://hackjoy-api.herokuapp.com/students/" + getIdUserEntity(), {}, function (data, textStatus, xhr) {
+        //console.log(data);
+        const [, match] = data["user"]["name"].match(/(\S+) /) || [];
+        $("#student_name").html("&nbsp" + match);
     }, true);
 }
 
@@ -23,6 +24,6 @@ $(document).ready(() => {
             loginStudent(email, password);
         }
 
-    })
+    });
 
 })
