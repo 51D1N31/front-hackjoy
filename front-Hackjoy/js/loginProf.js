@@ -12,13 +12,14 @@ function loginInstructor(email, password) {
 
 
     post("https://hackjoy-api.herokuapp.com/instructors/login", instructor, function (data, textStatus, xhr) {
+        //console.log(data);
         setUser("instructor", data["id_instructor"]);
         setToken(data["token"]);
 
         $("#btnsubmit").removeAttr("disabled");
         $("#btnsubmit").html("Entrar");
 
-        window.location = "painel_student.html";
+        window.location = "painel_instructor.html";
     });
 }
 
