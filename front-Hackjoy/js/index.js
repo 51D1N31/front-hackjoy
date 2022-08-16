@@ -7,13 +7,13 @@ function ajaxDinamico(url, tipo, dados, sucesso, token = "") {
             "Content-type": "application/json",
             "Authorization": "Bearer " + token
         },
-        success: function(data, textStatus, xhr) {
+        success: function (data, textStatus, xhr) {
             sucesso(data, textStatus, xhr);
         },
-        error: function(response) {
+        error: function (response) {
             console.error(response);
 
-            swal(response.responseJSON[0], "", "error");
+            //swal(response.responseJSON[0], "", "error");
         }
     });
 }
@@ -56,6 +56,7 @@ function setUser(entity, id) {
         case "instructor":
             sessionStorage.setItem("id_instructor", id);
     }
+    console.log(sessionStorage.getItem("id_instructor"));
 }
 
 function getIdUserEntity() {
@@ -75,9 +76,9 @@ function getToken() {
     return sessionStorage.getItem("token");
 }
 
-$(document).ready(function() {
+$(document).ready(function () {
 
-    $('#sidebarCollapse, #sidebarCollapse1').on('click', function() {
+    $('#sidebarCollapse, #sidebarCollapse1').on('click', function () {
         $('#sidebar').toggleClass('active');
         $("#sidebarCollapse").toggleClass('active');
     });

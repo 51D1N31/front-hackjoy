@@ -4,7 +4,7 @@ function verificaSeStudentEstaLogado() {
 
 function carregaStudentAtual() {
     get("https://hackjoy-api.herokuapp.com/students/" + getIdUserEntity(), {}, function (data, textStatus, xhr) {
-        //console.log(data);
+        console.log(data);
         const [, match] = data["user"]["name"].match(/(\S+) /) || [];
         $("#student_name").html("&nbsp" + match);
     }, true);
