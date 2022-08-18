@@ -30,7 +30,7 @@
     </style>
 </head>
 
-<body onload="verificaSeInstructorEstaLogado()">
+<body>
 
     <div class="wrapper">
         <div class="col-auto col-md-3 col-xl-2 bg-dark" id="sidebar">
@@ -148,7 +148,6 @@
                     <div class="shadow-sm p-3 mb-5 bg-white rounded">
                         <div class="container-fluid">
                             <div>
-                                <!-- #region texto principal -->
                                 <div>
                                     Nome:<br>
                                     <input style="width: 100%;" type="text">
@@ -164,7 +163,9 @@
                                     Frase:<br>
                                     <textarea name="frase" id="frase"></textarea>
                                 </div>
-                                <!-- #endregion -->
+                                <div>
+                                    <button type="button" id="cadastroCurriculo">Enviar</button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -208,6 +209,7 @@
     <!-- My js files -->
     <script src="../js/index.js" defer></script>
     <script src="../js/cadastro_certificado.js"></script>
+    <!--<script src="../js/instructor.js"></script>-->
 
     <script>
         $(document).ready(function () {
