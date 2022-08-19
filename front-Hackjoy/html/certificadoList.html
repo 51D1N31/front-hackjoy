@@ -18,9 +18,19 @@
 
     <link rel="shortcut icon" href="../Image/favicon.ico" type="image/x-icon">
 
+
+    <!-- summernote css -->
+    <link href="../imports/summernote-0.8.11-dist/dist/summernote-bs4.css" rel="stylesheet">
+    <style>
+        .note-editable {
+            font-family: "Arial" !important;
+            font-size: 24px !important;
+            line-height: 1;
+        }
+    </style>
 </head>
 
-<body onload="verificaSeInstructorEstaLogado()">
+<body>
 
     <div class="wrapper">
         <div class="col-auto col-md-3 col-xl-2 bg-dark" id="sidebar">
@@ -150,11 +160,21 @@
                 <div class="col">
                     <div class="shadow-sm p-3 mb-5 bg-white rounded">
                         <div class="container-fluid">
-                            <div style="text-align: center;">
-                                <!-- #region texto principal -->
-                                Ola, bem vindo de volta! Pelo visto tem
-                                alguns cursos para se acrescentarem conteúdo!
-                                <!-- #endregion -->
+                            <div>
+                                <!-- Começo textos Pagina -->
+                                <table class="table" id="list">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">Nome Certificado</th>
+                                            <th scope="col">Visualizar</th>
+                                            <th scope="col">Editar</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    </tbody>
+                                </table>
+                                <!-- Fim textos Pagina -->
                             </div>
                         </div>
                     </div>
@@ -189,9 +209,15 @@
     <!-- CDN SweetAlert JS -->
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
+    <!-- Summernote js -->
+    <script src="../imports/summernote-0.8.11-dist/dist/summernote-bs4.min.js" type="text/javascript"
+        charset="utf-8"></script>
+    <script src="../imports/summernote-0.8.11-dist/dist/lang/summernote-pt-BR.js" type="text/javascript"
+        charset="utf-8"></script>
+
     <!-- My js files -->
     <script src="../js/index.js" defer></script>
-    <script src="../js/instructor.js"></script>
+    <script src="../js/certificadoList.js"></script>
 
 </body>
 
