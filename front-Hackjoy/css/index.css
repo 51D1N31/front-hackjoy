@@ -35,6 +35,7 @@ a:focus {
     width: 0px;
     overflow: hidden;
     transition: all 0.3s;
+    position: relative;
 }
 
 #sidebar.active {
