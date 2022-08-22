@@ -15,6 +15,10 @@ li {
     margin-left: 20px;
 }
 
+.dropdown-menu>li {
+    margin-left: 0%;
+}
+
 
 /* esconde as ancoras da tela */
 
