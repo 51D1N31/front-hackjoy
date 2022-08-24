@@ -13,10 +13,9 @@ function carregaCertificados() {
                 "</td>" +
 
                 "<td>" +
+                "<a href='../html/certificadoEdit.html?id=" + i + "' class='btn btn-outline-secondary' id_certificado=" + listCertificado[i]["id"] + ">Abrir Certificado</a>" +
                 "</td>" +
 
-                "<td>" +
-                "</td>" +
                 "</tr>"
             );
         }
