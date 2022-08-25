@@ -44,6 +44,16 @@ a:focus {
     transition: all 0.3s;
 }
 
+#user {
+    position: relative;
+}
+
+#user.active {
+    position: fixed;
+    bottom: 1px;
+
+}
+
 @media (max-width: 575px) {
     #sidebar.active {
         width: 50%;
