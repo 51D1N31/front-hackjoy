@@ -28,6 +28,7 @@
             line-height: 1;
         }
     </style>
+
 </head>
 
 <body>
@@ -115,12 +116,12 @@
                     </li>
                 </ul>
                 <hr>
-                <div class="dropdown pb-4">
+                <div class="dropdown pb-4" id="user">
                     <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
                         id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
                         <img src="../Image/perfil.png" id="img_instructor" alt="instructor" width="30" height="30"
                             class="rounded-circle">
-                        <span id="instructor_name">user</span>
+                        <span id="instructor_name" class="instructor_name">user</span>
                     </a>
                     <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
                         <li><a class="dropdown-item" href="#">Configurações</a></li>
@@ -161,6 +162,7 @@
                     <div class="shadow-sm p-3 mb-5 bg-white rounded">
                         <div class="container-fluid">
                             <div>
+                                <!-- Começo textos pagina-->
                                 <div>
                                     Nome:<br>
                                     <input style="width: 100%;" type="text">
@@ -168,7 +170,7 @@
                                 <br>
                                 <div>
                                     Imagem:<br>
-                                    <input onchange="imagemAlterada(event);" style="width: 50%;" type="file" id="img"
+                                    <input onchange="imagemAlterada(event);" style="width: 24%;" type="file" id="img"
                                         name="img" accept="image/*">
                                 </div>
                                 <br>
@@ -176,9 +178,12 @@
                                     Frase:<br>
                                     <textarea name="frase" id="frase"></textarea>
                                 </div>
+                                <br>
                                 <div>
-                                    <button type="button" id="cadastroCurriculo">Enviar</button>
+                                    <button class="btn btn-secondary btn-lg" type="button"
+                                        id="cadastroCurriculo">Enviar</button>
                                 </div>
+                                <!-- FIm textos pagina-->
                             </div>
                         </div>
                     </div>
@@ -221,7 +226,7 @@
 
     <!-- My js files -->
     <script src="../js/index.js" defer></script>
-    <script src="../js/cadastro_certificado.js"></script>
+    <script src="../js/certificado.js"></script>
     <!--<script src="../js/instructor.js"></script>-->
 
     <script>

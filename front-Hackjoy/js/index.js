@@ -80,6 +80,7 @@ $(document).ready(function () {
 
     $('#sidebarCollapse, #sidebarCollapse1').on('click', function () {
         $('#sidebar').toggleClass('active');
+        $('#user').toggleClass('active');
         $("#sidebarCollapse").toggleClass('active');
     });
 
