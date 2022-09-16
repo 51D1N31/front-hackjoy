@@ -1,7 +1,11 @@
+let imagemEmBase64 = null;
+
 function imagemAlterada(event) {
     var reader = new FileReader();
     reader.onload = function () {
-        $('.note-editable').css('background-image', 'url(' + reader.result + ')');
+        imagemEmBase64 = reader.result;
+
+        $('.note-editable').css('background-image', 'url(' + imagemEmBase64 + ')');
         $('.note-editable').css('background-size', '842px 595px');
     }
     reader.readAsDataURL(event.target.files[0]);
@@ -21,8 +25,6 @@ function cadastrarCertificado(name, image, phrase) {
     };
 
     post("https://hackjoy-api.herokuapp.com/certificates/new", certificado, function (data, textStatus, xhr) {
-
-        console.log("entrou");
         if (typeof data == "object") {
             swal({
                 title: "Cadastrado com sucesso!",
@@ -44,10 +46,11 @@ $(document).ready(() => {
     $("#cadastroCurriculo").on("click", (e) => {
         e.preventDefault();
 
-        let name = 'legalzinn';
-        let image = 'legazinn';
-        let phrase = 'bem locon'
-        cadastrarCertificado(name, image, phrase);
-    })
+        let name = $("#nome").val();
+        let image = imagemEmBase64;
+        let phrase = $("#frase").val();
 
-})
+        cadastrarCertificado(name, image, phrase);
+    });
+
+});
