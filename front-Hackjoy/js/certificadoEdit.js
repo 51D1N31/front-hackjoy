@@ -1,13 +1,25 @@
+function imagemAlterada(event) {
+    var reader = new FileReader();
+    reader.onload = function () {
+        imagemEmBase64 = reader.result;
+
+        $('.note-editable').css('background-image', 'url(' + imagemEmBase64 + ')');
+        $('.note-editable').css('background-size', '842px 595px');
+    }
+    reader.readAsDataURL(event.target.files[0]);
+}
+
 function verCertificado(id) {
 
     get("https://hackjoy-api.herokuapp.com/certificates/" + id, {}, function (data, textStatus, xhr) {
-        console.log(data);
+        document.querySelector(".frase").innerHTML = data['phrase'];
+
+        iniciaSummernote();
+
+        $('.note-editable').css('background-image', 'url(data:image/png;base64,' + data["image"] + ')');
+        $('.note-editable').css('background-size', '842px 595px');
 
         document.getElementById("name").value = data["name"];
-        document.querySelector(".frase").innerHTML = "teste";
-        $("#frase").append(data['phrase']);
-
-        iniciaSummernote()
     });
 }
 
@@ -51,12 +63,10 @@ $(document).ready(() => {
     let getUrl = (window.location).href;
     let id = getUrl.substring(getUrl.lastIndexOf('=') + 1);
 
-    verCertificado(id);
     document.getElementById('name').disabled = true;
     document.getElementById('img').disabled = true;
 
-    //esse não está funcionando, não está desabilitando.
-    document.getElementById('frase').disabled = true;
+    verCertificado(id);
 
     $('#alterar').on('click', () => {
         document.getElementById('name').disabled = false;
