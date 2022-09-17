@@ -50,7 +50,9 @@ $(document).ready(() => {
         let image = imagemEmBase64;
         let phrase = $("#frase").val();
 
-        cadastrarCertificado(name, image, phrase);
+        let resultImage = image.replace("data:image/jpeg;base64,", "");
+
+        cadastrarCertificado(name, resultImage, phrase);
     });
 
 });

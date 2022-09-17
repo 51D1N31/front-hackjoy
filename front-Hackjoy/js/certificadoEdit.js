@@ -10,7 +10,6 @@ function imagemAlterada(event) {
 }
 
 function verCertificado(id) {
-
     get("https://hackjoy-api.herokuapp.com/certificates/" + id, {}, function (data, textStatus, xhr) {
         document.querySelector(".frase").innerHTML = data['phrase'];
 
@@ -24,7 +23,6 @@ function verCertificado(id) {
 }
 
 function alterarCertificado(certificado, id) {
-
     put("https://hackjoy-api.herokuapp.com/certificates/" + id, certificado, function (data, textStatus, xhr) {
 
         window.location = "certificadoList.html";
@@ -55,7 +53,6 @@ function iniciaSummernote() {
         ],
         popatmouse: false,
     });
-
 }
 
 $(document).ready(() => {
@@ -82,7 +79,7 @@ $(document).ready(() => {
             }
 
             alterarCertificado(certificado, id);
-        })
+        });
     });
 
     $('#cadastroCurriculo').on('click', (e) => {
@@ -90,4 +87,4 @@ $(document).ready(() => {
 
         window.location = "certificadoList.html";
     });
-})
+});
